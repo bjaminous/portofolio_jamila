@@ -35,12 +35,12 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 relative">
       <div className="container px-6 mx-auto">
-        <div className="max-w-3xl mb-20 text-left">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 font-display italic">
+        <div className="max-w-3xl mb-12 md:mb-20 text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 font-display italic">
             <span className="heading-gradient not-italic font-display">Projets </span>
             <span className="text-primary italic font-display">Sélectionnés.</span>
           </h2>
-          <p className="text-white/50 text-lg leading-relaxed font-sans max-w-2xl">
+          <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
             Une exploration de mes projets récents, chargés dynamiquement depuis GitHub. Chaque repository représente un défi technique relevé.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function Projects() {
             <p className="text-white/40 font-bold tracking-[0.2em] text-[10px] uppercase">Récupération des données GitHub...</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {repos.map((project, i) => (
               <motion.div
                 key={project.id}
@@ -59,7 +59,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 group flex flex-col h-full hover:bg-white/[0.03] transition-all"
+                className="glass-card p-6 md:p-8 group flex flex-col h-full hover:bg-white/[0.03] transition-all"
               >
                 <div className="flex justify-between items-start mb-8">
                   <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 group-hover:border-primary/30 transition-colors">

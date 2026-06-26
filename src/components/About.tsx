@@ -40,7 +40,7 @@ export default function About() {
               <img
                 src="/profile.jpg"
                 alt="Jamila Beulguibe"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8">
@@ -59,12 +59,12 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-10 font-display leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 md:mb-10 font-display leading-[1.1]">
               <span className="text-white">L'ingénierie au service du </span>
               <span className="text-primary font-display italic">produit.</span>
             </h2>
 
-            <div className="space-y-8 text-white/60 text-lg leading-relaxed font-sans">
+            <div className="space-y-6 md:space-y-8 text-white/60 text-base md:text-lg leading-relaxed font-sans">
               <p>
                 Développeuse Full-Stack en formation, je me distingue par ma capacité à <span className="text-white font-semibold italic">traduire un besoin métier</span> en solution technique robuste et élégante. Mon approche ne s'arrête pas au code : j'analyse l'impact utilisateur pour chaque ligne écrite.
               </p>
@@ -76,20 +76,20 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex gap-12 mt-12 pt-8 border-t border-white/5">
+            <div className="flex gap-8 md:gap-12 mt-10 md:mt-12 pt-8 border-t border-white/5">
               <div>
-                <p className="text-4xl font-bold text-white mb-1 font-display">100%</p>
-                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">Orientée Valeur</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">100%</p>
+                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">Orientée Valeur</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-white mb-1 font-display">Full</p>
-                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">Stack Autonome</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">Full</p>
+                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">Stack Autonome</p>
               </div>
             </div>
           </motion.div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 md:mt-24">
           {principles.map((item, index) => (
             <motion.div
               key={item.title}
@@ -97,7 +97,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-10 group hover:border-primary/30 transition-all border-white/[0.05]"
+              className="glass-card p-6 md:p-10 group hover:border-primary/30 transition-all border-white/[0.05]"
             >
               <div className="mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                 {item.icon}

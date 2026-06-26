@@ -25,10 +25,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-8 leading-[0.9] font-display"
+            className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-8 leading-[1.1] md:leading-[0.9] font-display"
           >
             <span className="heading-gradient font-display">Je conçois des expériences web </span>
-            <br />
+            <br className="hidden md:block" />
             <span className="text-gradient font-display">impactantes.</span>
           </motion.h1>
 
