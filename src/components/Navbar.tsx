@@ -1,20 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 
-const navItems = [
-  { name: "Home", href: "#home" },
+const navLinks = [
+  { name: "Accueil", href: "#home" },
+  { name: "À propos", href: "#about" },
   { name: "Stack", href: "#stack" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "About", href: "#about" },
+  { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,75 +24,99 @@ export default function Navbar() {
 
   return (
     <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled ? "bg-black/80 backdrop-blur-lg border-b border-white/5 py-3" : "bg-transparent"
-      )}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "py-4" : "py-8"
+        }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold tracking-tighter"
-        >
-          <span className="text-indigo-500">JAMILA</span>
-          <span className="text-white/60">.DEV</span>
-        </motion.div>
+      <div className="container px-6 mx-auto">
+        <div className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? "bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "bg-transparent border-transparent"
+          }`}>
+          {/* Logo */}
+          <a href="#home" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm transform group-hover:rotate-12 transition-transform">
+              J
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-bold tracking-tighter text-white leading-none font-display uppercase">Jamila</span>
+              <span className="text-[10px] font-bold text-primary-light tracking-widest leading-none font-display uppercase">Beulguibe</span>
+            </div>
+          </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item, i) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="text-sm font-medium text-white/70 hover:text-indigo-400 transition-colors relative group"
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="px-5 py-2 text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors relative group font-sans"
+              >
+                {link.name}
+                <span className="absolute bottom-1.5 left-5 right-5 h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="https://github.com/bjaminous"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-white/40 hover:text-white transition-colors"
             >
-              {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full" />
-            </motion.a>
-          ))}
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            href="#contact"
-            className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-indigo-500 transition-colors"
-          >
-            Let's Talk
-          </motion.a>
-        </div>
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-2.5 bg-white text-black rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all active:scale-95 font-sans"
+            >
+              Me recruter
+            </a>
+          </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X /> : <Menu />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {mobileMenuOpen && (
+        {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 mt-4 px-6 md:hidden"
           >
-            <div className="flex flex-col space-y-4 px-6 py-8">
-              {navItems.map((item) => (
+            <div className="bg-black/90 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 flex flex-col gap-6 shadow-2xl">
+              {navLinks.map((link) => (
                 <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-medium text-white/80 hover:text-indigo-400 transition-colors"
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-bold text-white/70 hover:text-primary transition-colors font-display"
                 >
-                  {item.name}
+                  {link.name}
                 </a>
               ))}
+              <hr className="border-white/5" />
+              <div className="flex items-center justify-between">
+                <div className="flex gap-4">
+                  <a href="https://github.com/bjaminous" target="_blank" className="text-white/40"><Github /></a>
+                  <a href="https://www.linkedin.com/in/jamila-beulguibe-inoussa-" target="_blank" className="text-white/40"><Linkedin /></a>
+                </div>
+                <a
+                  href="#contact"
+                  className="px-8 py-3 bg-primary text-white rounded-full font-bold font-sans text-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Me contacter
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

@@ -1,72 +1,111 @@
 import { motion } from "framer-motion";
-import { Terminal, Rocket } from "lucide-react";
+import { Code2, Target, Lightbulb, Users } from "lucide-react";
+
+const principles = [
+  {
+    icon: <Target className="w-6 h-6 text-primary" />,
+    title: "Sens Produit",
+    description: "Je ne développe pas juste des fonctionnalités, je conçois des solutions centrées sur la valeur utilisateur et métier."
+  },
+  {
+    icon: <Lightbulb className="w-6 h-6 text-accent-blue" />,
+    title: "Solution Maker",
+    description: "Mon rôle est de traduire des besoins complexes en architectures techniques simples, scalables et maintenables."
+  },
+  {
+    icon: <Code2 className="w-6 h-6 text-accent-pink" />,
+    title: "Qualité Logicielle",
+    description: "Je privilégie la rigueur et le clean code pour garantir des applications fiables et prêtes pour l'évolution."
+  },
+  {
+    icon: <Users className="w-6 h-6 text-primary-light" />,
+    title: "Esprit d'Équipe",
+    description: "La communication et la collaboration sont pour moi le socle de tout projet applicatif réussi."
+  }
+];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-white/[0.01]">
-      <div className="container px-6 mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+    <section id="about" className="py-24 relative overflow-hidden">
+      <div className="container px-6 mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2 relative"
+            transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <div className="absolute -inset-4 bg-indigo-500/20 rounded-[3rem] blur-3xl" />
-            <div className="relative glass p-2 rounded-[3.5rem] border border-white/10 overflow-hidden aspect-square flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-[3rem] overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
-                  alt="Jamila profile"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                />
+            <div className="relative z-10 rounded-[2.5rem] overflow-hidden border border-white/10 aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
+              <img
+                src="/profile.jpg"
+                alt="Jamila Beulguibe"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8">
+                <p className="text-2xl font-bold text-white font-display">Jamila Beulguibe</p>
+                <p className="text-primary-light font-medium tracking-wide">Développeuse Full-Stack</p>
               </div>
             </div>
-            
-            {/* Float stats */}
-            <motion.div 
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -bottom-6 -right-6 glass p-6 rounded-3xl border border-white/20 shadow-2xl"
-            >
-              <div className="text-3xl font-bold text-indigo-500">3+</div>
-              <div className="text-[10px] font-bold uppercase tracking-widest text-white/40">Years Exp.</div>
-            </motion.div>
+            {/* Décorations subtiles */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-[80px]" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent-blue/20 rounded-full blur-[80px]" />
           </motion.div>
 
-          <div className="w-full lg:w-1/2 text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">Engineering with <br /> <span className="text-indigo-500 italic font-medium">Soul.</span></h2>
-            
-            <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-bold mb-10 font-display leading-[1.1]">
+              <span className="text-white">L'ingénierie au service du </span>
+              <span className="text-primary font-display italic">produit.</span>
+            </h2>
+
+            <div className="space-y-8 text-white/60 text-lg leading-relaxed font-sans">
               <p>
-                My name is <span className="text-white font-semibold">Jamila Beulguibe Inoussa</span>. 
-                I don't just write code; I design systems that solve human problems. My journey started 
-                with a fascination for how logic can manifest into visual beauty.
+                Développeuse Full-Stack en formation, je me distingue par ma capacité à <span className="text-white font-semibold italic">traduire un besoin métier</span> en solution technique robuste et élégante. Mon approche ne s'arrête pas au code : j'analyse l'impact utilisateur pour chaque ligne écrite.
               </p>
               <p>
-                As a developer based in <span className="text-white font-semibold">Paris / Lille</span>, 
-                I bridge the gap between complex engineering and intuitive design. I believe that performance 
-                is a feature and that every micro-interaction contributes to the final product's success.
+                Actuellement en Bachelor à l'@<span className="text-white font-semibold">ECE Paris</span>, j'ai forgé mon expertise à travers des projets à forte valeur ajoutée, notamment dans les domaines de l'EDTECH et de la gestion applicative métier.
+              </p>
+              <p>
+                Ma force réside dans mon autonomie, ma rigueur et ma vision transversale qui me permet de piloter des projets de <span className="text-white">bout en bout</span>, de la conception logicielle à la mise en œuvre de solutions scalables.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 mt-12">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-indigo-400">
-                  <Terminal className="w-5 h-5" />
-                  <span className="font-bold text-[10px] tracking-widest uppercase">Clean Code</span>
-                </div>
-                <p className="text-xs text-white/50 italic">Semantic, DRY and scalable architecture.</p>
+            <div className="flex gap-12 mt-12 pt-8 border-t border-white/5">
+              <div>
+                <p className="text-4xl font-bold text-white mb-1 font-display">100%</p>
+                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">Orientée Valeur</p>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-indigo-400">
-                  <Rocket className="w-5 h-5" />
-                  <span className="font-bold text-[10px] tracking-widest uppercase">Performance</span>
-                </div>
-                <p className="text-xs text-white/50 italic">Optimized assets and server-side rendering.</p>
+              <div>
+                <p className="text-4xl font-bold text-white mb-1 font-display">Full</p>
+                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">Stack Autonome</p>
               </div>
             </div>
-          </div>
+          </motion.div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
+          {principles.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="glass-card p-10 group hover:border-primary/30 transition-all border-white/[0.05]"
+            >
+              <div className="mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white font-display uppercase tracking-widest">{item.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed font-sans">{item.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

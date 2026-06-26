@@ -1,76 +1,70 @@
 import { motion } from "framer-motion";
-import { 
-  Code2, 
-  Cpu, 
-  Database, 
-  Globe, 
-  Layers, 
-  Layout, 
-  Server, 
-  Zap 
-} from "lucide-react";
+import { Code2, Database, Layout, Settings } from "lucide-react";
 
-const technologies = [
-  { name: "React", icon: <Layout className="w-6 h-6" />, category: "Frontend", level: "Expert" },
-  { name: "TypeScript", icon: <Code2 className="w-6 h-6" />, category: "Language", level: "Expert" },
-  { name: "Tailwind CSS", icon: <Globe className="w-6 h-6" />, category: "Styling", level: "Advanced" },
-  { name: "Node.js", icon: <Server className="w-6 h-6" />, category: "Backend", level: "Advanced" },
-  { name: "Three.js", icon: <Layers className="w-6 h-6" />, category: "Graphics", level: "Intermediate" },
-  { name: "GSAP", icon: <Zap className="w-6 h-6" />, category: "Motion", level: "Advanced" },
-  { name: "Prisma", icon: <Database className="w-6 h-6" />, category: "Database", level: "Advanced" },
-  { name: "Docker", icon: <Cpu className="w-6 h-6" />, category: "DevOps", level: "Intermediate" },
+const skills = [
+  {
+    category: "Frontend",
+    icon: <Layout className="w-5 h-5 text-accent-pink" />,
+    items: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion"]
+  },
+  {
+    category: "Backend",
+    icon: <Code2 className="w-5 h-5 text-primary-light" />,
+    items: ["Node.js", "Laravel", "Express", "REST API", "PostgreSQL", "MySQL"]
+  },
+  {
+    category: "Base de données",
+    icon: <Database className="w-5 h-5 text-accent-blue" />,
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"]
+  },
+  {
+    category: "Outils & DevOps",
+    icon: <Settings className="w-5 h-5 text-white/40" />,
+    items: ["Git", "GitHub", "Vercel", "Docker", "Postman", "Figma"]
+  }
 ];
 
 export default function TechStack() {
   return (
-    <section id="stack" className="py-24 relative">
+    <section id="stack" className="py-24 bg-white/[0.01]">
       <div className="container px-6 mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Mastered <span className="text-indigo-400 text-gradient">Tools.</span></h2>
-            <p className="text-white/60 max-w-md">
-              A curated selection of technologies I use to build robust and scalable digital products.
-            </p>
-          </div>
-          <div className="text-sm font-mono text-indigo-400/60">
-            [ SKILLS.JSON ]
-          </div>
+        <div className="max-w-3xl mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display italic text-white">Mon <span className="not-italic text-primary font-display">Tech Stack.</span></h2>
+          <p className="text-white/50 text-lg leading-relaxed font-sans max-w-2xl">
+            Une sélection d'outils et de technologies modernes que j'utilise pour concevoir des produits digitaux performants et élégants.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {technologies.map((tech, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {skills.map((skill, index) => (
             <motion.div
-              key={tech.name}
+              key={skill.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="group p-6 glass rounded-3xl relative overflow-hidden transition-all hover:border-indigo-500/30"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="glass-card p-8 group relative overflow-hidden"
             >
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-indigo-500/20 transition-all text-indigo-400">
-                  {tech.icon}
-                </div>
-                <h3 className="text-lg font-bold mb-1">{tech.name}</h3>
-                <p className="text-[10px] text-white/40 font-medium uppercase tracking-widest">{tech.category}</p>
-                
-                <div className="mt-4 flex items-center gap-2">
-                  <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
-                    <motion.div 
-                      initial={{ width: 0 }}
-                      whileInView={{ width: tech.level === "Expert" ? "95%" : tech.level === "Advanced" ? "80%" : "60%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: 0.5 }}
-                      className="h-full bg-indigo-500"
-                    />
-                  </div>
-                  <span className="text-[10px] text-white/40 font-bold">{tech.level}</span>
-                </div>
+              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                {skill.icon}
               </div>
 
-              <div className="absolute -bottom-4 -right-4 text-7xl font-bold text-white/[0.02] select-none">
-                0{i + 1}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
+                  {skill.icon}
+                </div>
+                <h3 className="text-sm font-bold text-white font-display uppercase tracking-[0.2em]">{skill.category}</h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {skill.items.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-[11px] text-white/60 font-medium group-hover:border-white/20 group-hover:text-white transition-all font-sans"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}
