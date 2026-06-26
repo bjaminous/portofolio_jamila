@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin } from "lucide-react";
+import { Menu, X, Github, Linkedin, Terminal } from "lucide-react";
 
 const navLinks = [
   { name: "Accueil", href: "#home" },
@@ -32,8 +32,8 @@ export default function Navbar() {
           }`}>
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm transform group-hover:rotate-12 transition-transform">
-              J
+            <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary transform group-hover:rotate-12 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+              <Terminal className="w-5 h-5" />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold tracking-tighter text-white leading-none font-display uppercase">Jamila</span>
