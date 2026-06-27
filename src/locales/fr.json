@@ -103,6 +103,52 @@
             }
         }
     },
+    "certs": {
+        "title": "Certifications & Credentials",
+        "subtitle": "Toutes les certifications sont vérifiables — Cliquez pour voir les documents originaux.",
+        "view_cert": "Voir le Certificat",
+        "items": {
+            "loreal_brandstorm": {
+                "title": "L'Oréal Brandstorm 2026",
+                "issuer": "L'Oréal",
+                "date": "2026",
+                "type": "Distinction Internationale",
+                "file": "/certs/loreal_brandstorm.pdf",
+                "skills": [
+                    "Innovation Technologique",
+                    "Design Thinking",
+                    "Stratégie Produit",
+                    "Collaboration d'Équipe"
+                ]
+            },
+            "prompt_eng": {
+                "title": "IA & GenAI – Prompt Engineering (Niveau 1)",
+                "issuer": "DataScientest",
+                "date": "Déc. 2025",
+                "type": "Certification Officielle (QCM)",
+                "file": "/certs/prompt_engineering.pdf",
+                "skills": [
+                    "Prompt Engineering",
+                    "LLM Integration",
+                    "Usage des APIs IA",
+                    "Cas d'usage IA appliqués"
+                ]
+            },
+            "nocode_techaway": {
+                "title": "No Code - Techaway niv2 (FR)",
+                "issuer": "DataScientest",
+                "date": "Nov. 2025",
+                "type": "Certification Technique",
+                "file": "/certs/nocode_techaway.pdf",
+                "skills": [
+                    "Automatisation Procédurale",
+                    "Développement No Code Avancé",
+                    "Productivité Digitale",
+                    "Outils Techaway Niv. 2"
+                ]
+            }
+        }
+    },
     "contact": {
         "title_part1": "Travaillons",
         "title_part2": "Ensemble.",
