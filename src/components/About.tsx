@@ -68,19 +68,19 @@ export default function About() {
             </h2>
 
             <div className="space-y-6 md:space-y-8 text-[#CBD5E1] text-base md:text-lg leading-relaxed font-sans">
-              <p>{t("about.description1")}</p>
-              <p>{t("about.description2")}</p>
-              <p>{t("about.description3")}</p>
+              <p dangerouslySetInnerHTML={{ __html: t("about.description1").replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>') }} />
+              <p dangerouslySetInnerHTML={{ __html: t("about.description2").replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>') }} />
+              <p dangerouslySetInnerHTML={{ __html: t("about.description3").replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>') }} />
             </div>
 
             <div className="flex gap-8 md:gap-12 mt-10 md:mt-12 pt-8 border-t border-white/5">
               <div>
-                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">100%</p>
-                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">{t("about.stats.value")}</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">5 mois</p>
+                <p className="text-[9px] text-[#E2E8F0] uppercase tracking-[0.2em] font-bold">{t("about.stats.value")}</p>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">Full</p>
-                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">{t("about.stats.autonomy")}</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">24 mois</p>
+                <p className="text-[9px] text-[#E2E8F0] uppercase tracking-[0.2em] font-bold">{t("about.stats.autonomy")}</p>
               </div>
             </div>
           </motion.div>

@@ -19,46 +19,47 @@
     "about": {
         "title_part1": "Engineering for the",
         "title_part2": "product.",
-        "description1": "Full-Stack Developer passionate about innovation, specializing in robust web solutions and intelligent AI integration (LLM, APIs) to automate and optimize business processes.",
-        "description2": "Currently pursuing a Bachelor's at ECE Paris, I have built my expertise on solid architectures like Laravel and Symfony, while leveraging the flexibility of React and Node.js for modern user experiences.",
-        "description3": "My strength lies in my ability to lead projects end-to-end, combining technical rigor with product vision to deliver scalable and user-centric applications.",
+        "description1": "Rigorous Full-Stack Developer, I combine 5 months of experience in an **EDTECH** environment with expertise in **software design**. My approach is based on creating **scalable solutions** that precisely meet business needs.",
+        "description2": "Bachelor's student at ECE Paris, I have developed a solid culture of software **architecture**. I master the full development cycle, from functional analysis to technical implementation of **business value**.",
+        "description3": "Focused on innovation, I natively integrate AI into my workflows to optimize application performance and provide a smooth and powerful user experience.",
         "stats": {
-            "value": "Value Oriented",
-            "autonomy": "Full Autonomy"
+            "value": "5m EdTech Exp",
+            "autonomy": "24m Alternance"
         },
         "principles": {
             "target": {
                 "title": "Product Mindset",
-                "description": "I don't just develop features, I design solutions centered on user and business value."
+                "description": "In-depth analysis of business needs to deliver high-value-added features."
             },
             "lightbulb": {
                 "title": "Solution Maker",
-                "description": "My role is to translate complex needs into simple, scalable and maintainable technical architectures."
+                "description": "Transforming complex problems into simple and maintainable technical architectures."
             },
             "code": {
                 "title": "Software Quality",
-                "description": "I prioritize rigor and clean code to guarantee reliable and ready-to-evolve applications."
+                "description": "Respect for Clean Code standards and SOLID principles for robust applications."
             },
             "users": {
-                "title": "Team Spirit",
-                "description": "Communication and collaboration are for me the foundation of any successful application project."
+                "title": "Collaboration",
+                "description": "Transparent communication and teamwork at the heart of my project methodology."
             }
         }
     },
     "stack": {
         "title": "My Tech Stack.",
-        "subtitle": "An expertise focused on Laravel, Symfony and the React ecosystem, complemented by native AI integration.",
+        "subtitle": "Expertise focused on Laravel, Symfony and the React ecosystem, complemented by native AI integration (LLM, APIs).",
         "categories": {
             "frontend": "Frontend",
-            "backend": "Backend (PHP & Node)",
+            "backend": "Backend",
             "database": "Database",
-            "devops": "AI & Tools"
+            "devops": "Tools & DevOps",
+            "ai": "Artificial Intelligence"
         }
     },
     "projects": {
         "title_part1": "Selected",
         "title_part2": "Projects.",
-        "subtitle": "An exploration of my recent projects, dynamically loaded from GitHub. Each repository represents a technical challenge met.",
+        "subtitle": "Exploration of my recent technical achievements, dynamically loaded from GitHub for total transparency.",
         "loading": "Fetching GitHub data...",
         "no_description": "No description available for this repository. Check the code for more details.",
         "source_code": "Source Code",
@@ -105,14 +106,14 @@
     "contact": {
         "title_part1": "Let's work",
         "title_part2": "Together.",
-        "subtitle": "Have a project or opportunity? Let's talk about it.",
+        "subtitle": "Ready for a rigorous technical collaboration? Let's discuss your needs.",
         "social_title": "Social Networks",
         "social": {
             "github": "GitHub",
             "linkedin": "LinkedIn",
             "email": "Email"
         },
-        "form_title": "Send a message",
+        "form_title": "Send a professional message",
         "name": "Name",
         "email": "Email",
         "message": "Message",

@@ -31,12 +31,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "py-4" : "py-8"
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? "py-4" : "py-8"
         }`}
     >
       <div className="container px-6 mx-auto">
-        <div className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? "bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "bg-transparent border-transparent"
-          }`}>
+        <div
+          className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled
+              ? "bg-black/80 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.8)]"
+              : "bg-transparent border-transparent"
+            }`}
+        >
           {/* Logo with Avatar for Human Touch */}
           <a href="#home" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl border border-primary/20 overflow-hidden relative transform group-hover:rotate-6 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">

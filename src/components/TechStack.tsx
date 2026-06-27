@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Layout, Settings } from "lucide-react";
+import { Code2, Database, Layout, Settings, Brain } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function TechStack() {
@@ -9,22 +9,27 @@ export default function TechStack() {
     {
       category: t("stack.categories.frontend"),
       icon: <Layout className="w-5 h-5 text-accent-pink" />,
-      items: ["React", "Next.js", "Vue.js", "Angular", "Tailwind CSS", "TypeScript"]
+      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand"]
     },
     {
       category: t("stack.categories.backend"),
       icon: <Code2 className="w-5 h-5 text-primary-light" />,
-      items: ["PHP (Laravel)", "Symfony", "Node.js (Express)", "JWT / OAuth2", "RBAC", "PostgreSQL"]
+      items: ["PHP 8 (Laravel)", "Symfony", "Node.js (Express)", "REST API", "JWT / Auth", "Microservices"]
     },
     {
       category: t("stack.categories.database"),
       icon: <Database className="w-5 h-5 text-accent-blue" />,
-      items: ["PostgreSQL", "MySQL", "REST API", "Swagger", "Postman", "Prisma ORM"]
+      items: ["PostgreSQL", "MySQL", "Prisma ORM", "Redis", "MongoDB", "Firebase"]
     },
     {
       category: t("stack.categories.devops"),
       icon: <Settings className="w-5 h-5 text-white/40" />,
-      items: ["AI Integration (LLM)", "APIs AI", "Docker", "Git/GitHub", "Jira", "Figma"]
+      items: ["Docker", "Git / GitHub", "Vercel", "Postman", "Figma", "Jira"]
+    },
+    {
+      category: t("stack.categories.ai"),
+      icon: <Brain className="w-5 h-5 text-primary" />,
+      items: ["Prompt Flow", "LLM Integration", "API OpenAI", "Automatisation IA", "NoCode (Make)", "LangChain"]
     }
   ];
 
@@ -38,7 +43,7 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.category}

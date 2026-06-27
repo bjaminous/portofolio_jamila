@@ -19,46 +19,47 @@
     "about": {
         "title_part1": "L'ingénierie au service du",
         "title_part2": "produit.",
-        "description1": "Développeuse Full-Stack passionnée par l'innovation, je me spécialise dans la création de solutions web robustes et l'intégration intelligente de l'IA (LLM, APIs) pour automatiser et optimiser les processus métier.",
-        "description2": "Actuellement en Bachelor à l'ECE Paris, j'ai forgé mon expertise sur des architectures solides comme Laravel et Symfony, tout en exploitant la flexibilité de React et Node.js pour des expériences utilisateur modernes.",
-        "description3": "Ma force réside dans ma capacité à piloter des projets de bout en bout, en alliant rigueur technique et vision produit pour délivrer des applications scalables et centrées utilisateur.",
+        "description1": "Développeuse Full-Stack rigoureuse, je combine 5 mois d'expérience en environnement **EDTECH** avec une expertise en **conception logicielle**. Mon approche repose sur la création de **solutions scalables** répondant précisément aux besoins métier.",
+        "description2": "Étudiante en Bachelor à l'ECE Paris, j'ai développé une solide culture de l'**architecture** logicielle. Je maîtrise le cycle complet de développement, de l'analyse fonctionnelle à l'implémentation technique de **valeur métier**.",
+        "description3": "Focalisée sur l'innovation, j'intègre nativement l'IA dans mes workflows pour optimiser les performances des applications et offrir une expérience utilisateur fluide et performante.",
         "stats": {
-            "value": "Orientée Valeur",
-            "autonomy": "Stack Autonome"
+            "value": "5 mois EdTech",
+            "autonomy": "Alternance 24m"
         },
         "principles": {
             "target": {
                 "title": "Sens Produit",
-                "description": "Je ne développe pas juste des fonctionnalités, je conçois des solutions centrées sur la valeur utilisateur et métier."
+                "description": "Analyse approfondie des besoins métier pour délivrer des fonctionnalités à forte valeur ajoutée."
             },
             "lightbulb": {
                 "title": "Solution Maker",
-                "description": "Mon rôle est de traduire des besoins complexes en architectures techniques simples, scalables et maintenables."
+                "description": "Transformation de problématiques complexes en architectures techniques simples et maintenables."
             },
             "code": {
                 "title": "Qualité Logicielle",
-                "description": "Je privilégie la rigueur et le clean code pour garantir des applications fiables et prêtes pour l'évolution."
+                "description": "Respect des standards de Clean Code et des principes SOLID pour des applications robustes."
             },
             "users": {
-                "title": "Esprit d'Équipe",
-                "description": "La communication et la collaboration sont pour moi le socle de tout projet applicatif réussi."
+                "title": "Collaboration",
+                "description": "Communication transparente et travail d'équipe au cœur de ma méthodologie de projet."
             }
         }
     },
     "stack": {
         "title": "Mon Tech Stack.",
-        "subtitle": "Une expertise centrée sur Laravel, Symfony et l'écosystème React, complétée par une intégration native de l'IA.",
+        "subtitle": "Une expertise centrée sur Laravel, Symfony et l'écosystème React, complétée par une intégration native de l'IA (LLM, APIs).",
         "categories": {
             "frontend": "Frontend",
-            "backend": "Backend (PHP & Node)",
+            "backend": "Backend",
             "database": "Base de données",
-            "devops": "IA & Outils"
+            "devops": "Outils & DevOps",
+            "ai": "Intelligence Artificielle"
         }
     },
     "projects": {
         "title_part1": "Projets",
         "title_part2": "Sélectionnés.",
-        "subtitle": "Une exploration de mes projets récents, chargés dynamiquement depuis GitHub. Chaque repository représente un défi technique relevé.",
+        "subtitle": "Exploration de mes réalisations techniques récentes, chargées dynamiquement depuis GitHub pour une transparence totale.",
         "loading": "Récupération des données GitHub...",
         "no_description": "Pas de description disponible pour ce repository. Consultez le code pour plus de détails.",
         "source_code": "Code Source",
@@ -105,14 +106,14 @@
     "contact": {
         "title_part1": "Travaillons",
         "title_part2": "Ensemble.",
-        "subtitle": "Vous avez un projet ou une opportunité ? Discutons-en.",
+        "subtitle": "Prêt pour une collaboration technique rigoureuse ? Discutons de vos besoins.",
         "social_title": "Réseaux Sociaux",
         "social": {
             "github": "GitHub",
             "linkedin": "LinkedIn",
             "email": "Email"
         },
-        "form_title": "Envoyer un message",
+        "form_title": "Envoyer un message professionnel",
         "name": "Nom",
         "email": "Email",
         "message": "Message",
