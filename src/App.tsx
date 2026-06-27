@@ -38,8 +38,8 @@ function App() {
                     <Terminal className="w-5 h-5" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm font-bold tracking-tighter text-white leading-none uppercase font-display">JAMILA</span>
-                    <span className="text-[10px] font-bold text-primary-light tracking-widest leading-none uppercase font-display">BEULGUIBE</span>
+                    <span className="text-sm font-bold tracking-tighter text-white leading-none uppercase font-display group-hover:text-primary transition-colors">JAMILA</span>
+                    <span className="text-[10px] font-bold text-primary-light tracking-widest leading-none uppercase font-display opacity-70">BEULGUIBE</span>
                   </div>
                 </a>
               </div>

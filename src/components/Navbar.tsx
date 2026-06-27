@@ -37,22 +37,18 @@ export default function Navbar() {
       <div className="container px-6 mx-auto">
         <div
           className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled
-              ? "bg-black/80 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.8)]"
-              : "bg-transparent border-transparent"
+            ? "bg-black/80 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.8)]"
+            : "bg-transparent border-transparent"
             }`}
         >
           {/* Logo with Avatar for Human Touch */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl border border-primary/20 overflow-hidden relative transform group-hover:rotate-6 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-              <img
-                src="/profile.jpg"
-                alt="Jamila"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              />
+          <a href="#home" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-[0_0_15px_rgba(139,92,246,0.1)] group-hover:rotate-12">
+              <Terminal className="w-5 h-5" />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-tighter text-white leading-none font-display uppercase">Jamila</span>
-              <span className="text-[10px] font-bold text-primary-light tracking-widest leading-none font-display uppercase">Beulguibe</span>
+              <span className="text-sm font-bold tracking-tighter text-white leading-none font-display uppercase group-hover:text-primary transition-colors">Jamila</span>
+              <span className="text-[10px] font-bold text-primary-light tracking-widest leading-none font-display uppercase opacity-70">BEULGUIBE</span>
             </div>
           </a>
 
