@@ -1,30 +1,33 @@
 import { motion } from "framer-motion";
 import { Code2, Target, Lightbulb, Users } from "lucide-react";
-
-const principles = [
-  {
-    icon: <Target className="w-6 h-6 text-primary" />,
-    title: "Sens Produit",
-    description: "Je ne développe pas juste des fonctionnalités, je conçois des solutions centrées sur la valeur utilisateur et métier."
-  },
-  {
-    icon: <Lightbulb className="w-6 h-6 text-accent-blue" />,
-    title: "Solution Maker",
-    description: "Mon rôle est de traduire des besoins complexes en architectures techniques simples, scalables et maintenables."
-  },
-  {
-    icon: <Code2 className="w-6 h-6 text-accent-pink" />,
-    title: "Qualité Logicielle",
-    description: "Je privilégie la rigueur et le clean code pour garantir des applications fiables et prêtes pour l'évolution."
-  },
-  {
-    icon: <Users className="w-6 h-6 text-primary-light" />,
-    title: "Esprit d'Équipe",
-    description: "La communication et la collaboration sont pour moi le socle de tout projet applicatif réussi."
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
+  const principles = [
+    {
+      icon: <Target className="w-6 h-6 text-primary" />,
+      title: t("about.principles.target.title"),
+      description: t("about.principles.target.description")
+    },
+    {
+      icon: <Lightbulb className="w-6 h-6 text-accent-blue" />,
+      title: t("about.principles.lightbulb.title"),
+      description: t("about.principles.lightbulb.description")
+    },
+    {
+      icon: <Code2 className="w-6 h-6 text-accent-pink" />,
+      title: t("about.principles.code.title"),
+      description: t("about.principles.code.description")
+    },
+    {
+      icon: <Users className="w-6 h-6 text-primary-light" />,
+      title: t("about.principles.users.title"),
+      description: t("about.principles.users.description")
+    }
+  ];
+
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="container px-6 mx-auto relative z-10">
@@ -60,30 +63,24 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 md:mb-10 font-display leading-[1.1]">
-              <span className="text-white">L'ingénierie au service du </span>
-              <span className="text-primary font-display italic">produit.</span>
+              <span className="text-white">{t("about.title_part1")} </span>
+              <span className="text-primary font-display italic">{t("about.title_part2")}</span>
             </h2>
 
             <div className="space-y-6 md:space-y-8 text-white/60 text-base md:text-lg leading-relaxed font-sans">
-              <p>
-                Développeuse Full-Stack en formation, je me distingue par ma capacité à <span className="text-white font-semibold italic">traduire un besoin métier</span> en solution technique robuste et élégante. Mon approche ne s'arrête pas au code : j'analyse l'impact utilisateur pour chaque ligne écrite.
-              </p>
-              <p>
-                Actuellement en Bachelor à l'@<span className="text-white font-semibold">ECE Paris</span>, j'ai forgé mon expertise à travers des projets à forte valeur ajoutée, notamment dans les domaines de l'EDTECH et de la gestion applicative métier.
-              </p>
-              <p>
-                Ma force réside dans mon autonomie, ma rigueur et ma vision transversale qui me permet de piloter des projets de <span className="text-white">bout en bout</span>, de la conception logicielle à la mise en œuvre de solutions scalables.
-              </p>
+              <p>{t("about.description1")}</p>
+              <p>{t("about.description2")}</p>
+              <p>{t("about.description3")}</p>
             </div>
 
             <div className="flex gap-8 md:gap-12 mt-10 md:mt-12 pt-8 border-t border-white/5">
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">100%</p>
-                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">Orientée Valeur</p>
+                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">{t("about.stats.value")}</p>
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-display">Full</p>
-                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">Stack Autonome</p>
+                <p className="text-[9px] text-white/40 uppercase tracking-[0.2em] font-bold">{t("about.stats.autonomy")}</p>
               </div>
             </div>
           </motion.div>

@@ -1,18 +1,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Terminal } from "lucide-react";
-
-const navLinks = [
-  { name: "Accueil", href: "#home" },
-  { name: "À propos", href: "#about" },
-  { name: "Stack", href: "#stack" },
-  { name: "Projets", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { Menu, X, Github, Linkedin, Terminal, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: t("nav.home"), href: "#home" },
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.stack"), href: "#stack" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === "fr" ? "en" : "fr";
+    i18n.changeLanguage(nextLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,29 +64,36 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-              href="https://github.com/bjaminous"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-white/40 hover:text-white transition-colors"
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-white/60 hover:text-white transition-all uppercase tracking-widest"
             >
-              <Github className="w-5 h-5" />
-            </a>
+              <Globe className="w-3.5 h-3.5" />
+              {i18n.language.split("-")[0].toUpperCase()}
+            </button>
             <a
               href="#contact"
               className="px-6 py-2.5 bg-white text-black rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all active:scale-95 font-sans"
             >
-              Me recruter
+              {t("nav.hire")}
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={toggleLanguage}
+              className="p-2 text-white/60"
+            >
+              <Globe className="w-5 h-5" />
+            </button>
+            <button
+              className="p-2 text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -114,7 +128,7 @@ export default function Navbar() {
                   className="px-8 py-3 bg-primary text-white rounded-full font-bold font-sans text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Me contacter
+                  {t("nav.contact_me")}
                 </a>
               </div>
             </div>

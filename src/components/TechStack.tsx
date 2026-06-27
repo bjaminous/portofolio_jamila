@@ -1,37 +1,40 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Layout, Settings } from "lucide-react";
-
-const skills = [
-  {
-    category: "Frontend",
-    icon: <Layout className="w-5 h-5 text-accent-pink" />,
-    items: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion"]
-  },
-  {
-    category: "Backend",
-    icon: <Code2 className="w-5 h-5 text-primary-light" />,
-    items: ["Node.js", "Laravel", "Express", "REST API", "PostgreSQL", "MySQL"]
-  },
-  {
-    category: "Base de données",
-    icon: <Database className="w-5 h-5 text-accent-blue" />,
-    items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"]
-  },
-  {
-    category: "Outils & DevOps",
-    icon: <Settings className="w-5 h-5 text-white/40" />,
-    items: ["Git", "GitHub", "Vercel", "Docker", "Postman", "Figma"]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function TechStack() {
+  const { t } = useTranslation();
+
+  const skills = [
+    {
+      category: t("stack.categories.frontend"),
+      icon: <Layout className="w-5 h-5 text-accent-pink" />,
+      items: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion"]
+    },
+    {
+      category: t("stack.categories.backend"),
+      icon: <Code2 className="w-5 h-5 text-primary-light" />,
+      items: ["Node.js", "Laravel", "Express", "REST API", "PostgreSQL", "MySQL"]
+    },
+    {
+      category: t("stack.categories.database"),
+      icon: <Database className="w-5 h-5 text-accent-blue" />,
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"]
+    },
+    {
+      category: t("stack.categories.devops"),
+      icon: <Settings className="w-5 h-5 text-white/40" />,
+      items: ["Git", "GitHub", "Vercel", "Docker", "Postman", "Figma"]
+    }
+  ];
+
   return (
     <section id="stack" className="py-24 bg-white/[0.01]">
       <div className="container px-6 mx-auto">
         <div className="max-w-3xl mb-12 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-display italic text-white">Mon <span className="not-italic text-primary font-display">Tech Stack.</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-display italic text-white">{t("stack.title")}</h2>
           <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
-            Une sélection d'outils et de technologies modernes que j'utilise pour concevoir des produits digitaux performants et élégants.
+            {t("stack.subtitle")}
           </p>
         </div>
 

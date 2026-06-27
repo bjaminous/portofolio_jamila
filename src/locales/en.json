@@ -1,0 +1,126 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "stack": "Stack",
+        "projects": "Projects",
+        "contact": "Contact",
+        "hire": "Hire Me",
+        "contact_me": "Contact Me"
+    },
+    "hero": {
+        "status": "Available for new opportunities",
+        "title_part1": "I design impactful ",
+        "title_part2": "web experiences.",
+        "subtitle": "Full-Stack Developer | React | TypeScript | Node.js | API",
+        "view_projects": "View my projects",
+        "contact_me": "Contact Me"
+    },
+    "about": {
+        "title_part1": "Engineering for the",
+        "title_part2": "product.",
+        "description1": "Full-Stack Developer in training, I stand out for my ability to translate a business need into a robust and elegant technical solution. My approach doesn't stop at the code: I analyze the user impact for every line written.",
+        "description2": "Currently pursuing a Bachelor's at @ECE Paris, I have forged my expertise through high-value projects, notably in the EDTECH and business application management fields.",
+        "description3": "My strength lies in my autonomy, rigor and transversal vision that allows me to lead projects from end to end, from software design to the implementation of scalable solutions.",
+        "stats": {
+            "value": "Value Oriented",
+            "autonomy": "Full Autonomy"
+        },
+        "principles": {
+            "target": {
+                "title": "Product Mindset",
+                "description": "I don't just develop features, I design solutions centered on user and business value."
+            },
+            "lightbulb": {
+                "title": "Solution Maker",
+                "description": "My role is to translate complex needs into simple, scalable and maintainable technical architectures."
+            },
+            "code": {
+                "title": "Software Quality",
+                "description": "I prioritize rigor and clean code to guarantee reliable and ready-to-evolve applications."
+            },
+            "users": {
+                "title": "Team Spirit",
+                "description": "Communication and collaboration are for me the foundation of any successful application project."
+            }
+        }
+    },
+    "stack": {
+        "title": "My Tech Stack.",
+        "subtitle": "A selection of modern tools and technologies I use to design high-performance and elegant digital products.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Database",
+            "devops": "Tools & DevOps"
+        }
+    },
+    "projects": {
+        "title_part1": "Selected",
+        "title_part2": "Projects.",
+        "subtitle": "An exploration of my recent projects, dynamically loaded from GitHub. Each repository represents a technical challenge met.",
+        "loading": "Fetching GitHub data...",
+        "no_description": "No description available for this repository. Check the code for more details.",
+        "source_code": "Source Code",
+        "live_demo": "Live Demo",
+        "view_more": "View more on GitHub"
+    },
+    "experience": {
+        "title_part1": "My",
+        "title_part2": "Journey.",
+        "subtitle": "A logical progression combining academic rigor and concrete field experiences, centered on value creation and technical excellence.",
+        "items": {
+            "ece_bachelor": {
+                "title": "Bachelor – Application Development",
+                "company": "ECE – Engineering School, Paris",
+                "period": "Since October 2025",
+                "description": "Deepening service-oriented architectures and Agile project management. Focus on product vision, software quality, and integration of high-performance NoCode solutions."
+            },
+            "iuc_stage": {
+                "title": "Full-Stack Developer (Internship)",
+                "company": "Institut Universitaire de la Côte – Douala",
+                "period": "January 2025 – May 2025",
+                "description": "Full design of a management application for Alumni. Modeling complex databases meeting business needs and active participation in functional analysis."
+            },
+            "iuc_bachelor": {
+                "title": "Bachelor – Information Systems Design",
+                "company": "IUC, Douala",
+                "period": "October 2024 – July 2025",
+                "description": "Specialization in needs analysis and modeling. Mastery of the data lifecycle and robust information system design methodologies."
+            },
+            "innovative_stage": {
+                "title": "Web Developer (Internship)",
+                "company": "Innovative Clan (EDTECH) – Douala",
+                "period": "February 2024 – June 2024",
+                "description": "Major contribution to the development of an EDTECH platform for universities. Full immersion in the project cycle: from needs analysis to final technical implementation."
+            },
+            "iut_dut": {
+                "title": "DUT – Computer Science",
+                "company": "IUT, Douala",
+                "period": "September 2022 – July 2024",
+                "description": "Acquisition of software engineering fundamentals and mobile/web application development. Rigorous learning of IT project management."
+            }
+        }
+    },
+    "contact": {
+        "title_part1": "Let's work",
+        "title_part2": "Together.",
+        "subtitle": "Have a project or opportunity? Let's talk about it.",
+        "social_title": "Social Networks",
+        "social": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "email": "Email"
+        },
+        "form_title": "Send a message",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "sent": "Message Sent!"
+    },
+    "footer": {
+        "text": "Crafted with precision & passion"
+    }
+}

@@ -1,64 +1,67 @@
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap, Calendar, CheckCircle2 } from "lucide-react";
-
-const experiences = [
-  {
-    title: "Bachelor – Développement d’applications",
-    company: "ECE – École d’ingénieurs, Paris",
-    period: "Depuis Octobre 2025",
-    description: "Approfondissement des architectures orientées services et de la gestion de projet Agile. Focus sur la vision produit, la qualité logicielle et l'intégration de solutions NoCode performantes.",
-    type: "edu",
-    tags: ["Conception Logicielle", "Agile", "Qualité"]
-  },
-  {
-    title: "Développeuse Full-Stack (Stage)",
-    company: "Institut Universitaire de la Côte – Douala",
-    period: "Janvier 2025 – Mai 2025",
-    description: "Conception intégrale d'une application de gestion pour les Alumni. Modélisation de bases de données complexes répondant aux besoins métier et participation active à l'analyse fonctionnelle.",
-    type: "work",
-    tags: ["Full-Stack", "Architecture", "Relation Client"]
-  },
-  {
-    title: "Bachelor – Conception des systèmes d’information",
-    company: "IUC, Douala",
-    period: "Octobre 2024 – Juillet 2025",
-    description: "Spécialisation dans l'analyse et la modélisation des besoins. Maîtrise du cycle de vie des données et des méthodologies de conception de systèmes d'information robustes.",
-    type: "edu",
-    tags: ["Analyse SI", "Full-Stack Dev", "Modélisation"]
-  },
-  {
-    title: "Développeuse Web (Stage)",
-    company: "Innovative Clan (EDTECH) – Douala",
-    period: "Février 2024 – Juin 2024",
-    description: "Contribution majeure au développement d'une plateforme EDTECH pour les universités. Immersion dans le cycle complet du projet : de l'analyse des besoins à l'implémentation technique finale.",
-    type: "work",
-    tags: ["EDTECH", "Collaboration Team", "Product Thinking"]
-  },
-  {
-    title: "DUT – Génie Informatique",
-    company: "IUT, Douala",
-    period: "Septembre 2022 – Juillet 2024",
-    description: "Acquisition des fondamentaux du génie logiciel et du développement d'applications mobiles et web. Apprentissage rigoureux de la gestion de projet informatique.",
-    type: "edu",
-    tags: ["Génie Logiciel", "Mobile", "Algo"]
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Experience() {
+  const { t } = useTranslation();
+
+  const experiences = [
+    {
+      title: t("experience.items.ece_bachelor.title"),
+      company: t("experience.items.ece_bachelor.company"),
+      period: t("experience.items.ece_bachelor.period"),
+      description: t("experience.items.ece_bachelor.description"),
+      type: "edu",
+      tags: ["Conception Logicielle", "Agile", "Qualité"]
+    },
+    {
+      title: t("experience.items.iuc_stage.title"),
+      company: t("experience.items.iuc_stage.company"),
+      period: t("experience.items.iuc_stage.period"),
+      description: t("experience.items.iuc_stage.description"),
+      type: "work",
+      tags: ["Full-Stack", "Architecture", "Relation Client"]
+    },
+    {
+      title: t("experience.items.iuc_bachelor.title"),
+      company: t("experience.items.iuc_bachelor.company"),
+      period: t("experience.items.iuc_bachelor.period"),
+      description: t("experience.items.iuc_bachelor.description"),
+      type: "edu",
+      tags: ["Analyse SI", "Full-Stack Dev", "Modélisation"]
+    },
+    {
+      title: t("experience.items.innovative_stage.title"),
+      company: t("experience.items.innovative_stage.company"),
+      period: t("experience.items.innovative_stage.period"),
+      description: t("experience.items.innovative_stage.description"),
+      type: "work",
+      tags: ["EDTECH", "Collaboration Team", "Product Thinking"]
+    },
+    {
+      title: t("experience.items.iut_dut.title"),
+      company: t("experience.items.iut_dut.company"),
+      period: t("experience.items.iut_dut.period"),
+      description: t("experience.items.iut_dut.description"),
+      type: "edu",
+      tags: ["Génie Logiciel", "Mobile", "Algo"]
+    }
+  ];
+
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
       <div className="container px-6 mx-auto relative z-10">
         <div className="max-w-3xl mb-12 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-display text-white italic">Mon <span className="not-italic text-primary">Parcours.</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-display text-white italic">{t("experience.title_part1")} <span className="not-italic text-primary">{t("experience.title_part2")}</span></h2>
           <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
-            Une progression logique alliant rigueur académique et expériences concrètes sur le terrain, centrée sur la création de valeur et l'excellence technique.
+            {t("experience.subtitle")}
           </p>
         </div>
 
         <div className="relative border-l border-white/10 ml-2 md:ml-12 space-y-12 md:space-y-16 pb-12">
           {experiences.map((exp, index) => (
             <motion.div
-              key={exp.title + exp.period}
+              key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

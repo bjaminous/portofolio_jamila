@@ -1,0 +1,126 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "stack": "Stack",
+        "projects": "Projets",
+        "contact": "Contact",
+        "hire": "Me recruter",
+        "contact_me": "Me contacter"
+    },
+    "hero": {
+        "status": "Disponible pour de nouvelles opportunités",
+        "title_part1": "Je conçois des expériences web",
+        "title_part2": "impactantes.",
+        "subtitle": "Développeuse Full-Stack | React | TypeScript | Node.js | API",
+        "view_projects": "Voir mes projets",
+        "contact_me": "Me contacter"
+    },
+    "about": {
+        "title_part1": "L'ingénierie au service du",
+        "title_part2": "produit.",
+        "description1": "Développeuse Full-Stack en formation, je me distingue par ma capacité à traduire un besoin métier en solution technique robuste et élégante. Mon approche ne s'arrête pas au code : j'analyse l'impact utilisateur pour chaque ligne écrite.",
+        "description2": "Actuellement en Bachelor à l'@ECE Paris, j'ai forgé mon expertise à travers des projets à forte valeur ajoutée, notamment dans les domaines de l'EDTECH et de la gestion applicative métier.",
+        "description3": "Ma force réside dans mon autonomie, ma rigueur et ma vision transversale qui me permet de piloter des projets de bout en bout, de la conception logicielle à la mise en œuvre de solutions scalables.",
+        "stats": {
+            "value": "Orientée Valeur",
+            "autonomy": "Stack Autonome"
+        },
+        "principles": {
+            "target": {
+                "title": "Sens Produit",
+                "description": "Je ne développe pas juste des fonctionnalités, je conçois des solutions centrées sur la valeur utilisateur et métier."
+            },
+            "lightbulb": {
+                "title": "Solution Maker",
+                "description": "Mon rôle est de traduire des besoins complexes en architectures techniques simples, scalables et maintenables."
+            },
+            "code": {
+                "title": "Qualité Logicielle",
+                "description": "Je privilégie la rigueur et le clean code pour garantir des applications fiables et prêtes pour l'évolution."
+            },
+            "users": {
+                "title": "Esprit d'Équipe",
+                "description": "La communication et la collaboration sont pour moi le socle de tout projet applicatif réussi."
+            }
+        }
+    },
+    "stack": {
+        "title": "Mon Tech Stack.",
+        "subtitle": "Une sélection d'outils et de technologies modernes que j'utilise pour concevoir des produits digitaux performants et élégants.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Base de données",
+            "devops": "Outils & DevOps"
+        }
+    },
+    "projects": {
+        "title_part1": "Projets",
+        "title_part2": "Sélectionnés.",
+        "subtitle": "Une exploration de mes projets récents, chargés dynamiquement depuis GitHub. Chaque repository représente un défi technique relevé.",
+        "loading": "Récupération des données GitHub...",
+        "no_description": "Pas de description disponible pour ce repository. Consultez le code pour plus de détails.",
+        "source_code": "Code Source",
+        "live_demo": "Démo Live",
+        "view_more": "Voir plus sur GitHub"
+    },
+    "experience": {
+        "title_part1": "Mon",
+        "title_part2": "Parcours.",
+        "subtitle": "Une progression logique alliant rigueur académique et expériences concrètes sur le terrain, centrée sur la création de valeur et l'excellence technique.",
+        "items": {
+            "ece_bachelor": {
+                "title": "Bachelor – Développement d’applications",
+                "company": "ECE – École d’ingénieurs, Paris",
+                "period": "Depuis Octobre 2025",
+                "description": "Approfondissement des architectures orientées services et de la gestion de projet Agile. Focus sur la vision produit, la qualité logicielle et l'intégration de solutions NoCode performantes."
+            },
+            "iuc_stage": {
+                "title": "Développeuse Full-Stack (Stage)",
+                "company": "Institut Universitaire de la Côte – Douala",
+                "period": "Janvier 2025 – Mai 2025",
+                "description": "Conception intégrale d'une application de gestion pour les Alumni. Modélisation de bases de données complexes répondant aux besoins métier et participation active à l'analyse fonctionnelle."
+            },
+            "iuc_bachelor": {
+                "title": "Bachelor – Conception des systèmes d’information",
+                "company": "IUC, Douala",
+                "period": "Octobre 2024 – Juillet 2025",
+                "description": "Spécialisation dans l'analyse et la modélisation des besoins. Maîtrise du cycle de vie des données et des méthodologies de conception de systèmes d'information robustes."
+            },
+            "innovative_stage": {
+                "title": "Développeuse Web (Stage)",
+                "company": "Innovative Clan (EDTECH) – Douala",
+                "period": "Février 2024 – Juin 2024",
+                "description": "Contribution majeure au développement d'une plateforme EDTECH pour les universités. Immersion dans le cycle complet du projet : de l'analyse des besoins à l'implémentation technique finale."
+            },
+            "iut_dut": {
+                "title": "DUT – Génie Informatique",
+                "company": "IUT, Douala",
+                "period": "Septembre 2022 – Juillet 2024",
+                "description": "Acquisition des fondamentaux du génie logiciel et du développement d'applications mobiles et web. Apprentissage rigoureux de la gestion de projet informatique."
+            }
+        }
+    },
+    "contact": {
+        "title_part1": "Travaillons",
+        "title_part2": "Ensemble.",
+        "subtitle": "Vous avez un projet ou une opportunité ? Discutons-en.",
+        "social_title": "Réseaux Sociaux",
+        "social": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "email": "Email"
+        },
+        "form_title": "Envoyer un message",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "send": "Envoyer le message",
+        "sending": "Envoi en cours...",
+        "sent": "Message envoyé !"
+    },
+    "footer": {
+        "text": "Conçu avec précision & passion"
+    }
+}

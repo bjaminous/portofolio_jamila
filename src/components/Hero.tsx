@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Elements */}
@@ -18,7 +21,7 @@ export default function Hero() {
             className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-primary-light mb-8 backdrop-blur-sm font-sans"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Disponible pour de nouvelles opportunités</span>
+            <span>{t("hero.status")}</span>
           </motion.div>
 
           <motion.h1
@@ -27,9 +30,9 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-8 leading-[1.1] md:leading-[0.9] font-display"
           >
-            <span className="heading-gradient font-display">Je conçois des expériences web </span>
+            <span className="heading-gradient font-display">{t("hero.title_part1")} </span>
             <br className="hidden md:block" />
-            <span className="text-gradient font-display">impactantes.</span>
+            <span className="text-gradient font-display">{t("hero.title_part2")}</span>
           </motion.h1>
 
           <motion.div
@@ -39,7 +42,7 @@ export default function Hero() {
             className="flex flex-col items-center gap-6"
           >
             <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto font-medium tracking-wide font-sans">
-              Développeuse Full-Stack | <span className="text-white">React</span> | <span className="text-white">TypeScript</span> | <span className="text-white">Node.js</span> | <span className="text-white">API</span>
+              {t("hero.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-4 font-sans">
@@ -48,7 +51,7 @@ export default function Hero() {
                 className="group relative px-10 py-4 bg-primary text-white rounded-full font-bold overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-105 active:scale-95"
               >
                 <span className="relative z-10 flex items-center gap-2 text-base">
-                  Voir mes projets <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  {t("hero.view_projects")} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               </a>
@@ -57,7 +60,7 @@ export default function Hero() {
                 href="#contact"
                 className="px-10 py-4 rounded-full bg-white/5 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 font-bold active:scale-95"
               >
-                Me contacter
+                {t("hero.contact_me")}
               </a>
             </div>
 

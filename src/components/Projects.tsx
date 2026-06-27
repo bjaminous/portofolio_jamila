@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight, Loader2, Star, GitFork } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Repo {
   id: number;
@@ -14,6 +15,7 @@ interface Repo {
 }
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -37,18 +39,18 @@ export default function Projects() {
       <div className="container px-6 mx-auto">
         <div className="max-w-3xl mb-12 md:mb-20 text-left">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 font-display italic">
-            <span className="heading-gradient not-italic font-display">Projets </span>
-            <span className="text-primary italic font-display">Sélectionnés.</span>
+            <span className="heading-gradient not-italic font-display">{t("projects.title_part1")} </span>
+            <span className="text-primary italic font-display">{t("projects.title_part2")}</span>
           </h2>
           <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
-            Une exploration de mes projets récents, chargés dynamiquement depuis GitHub. Chaque repository représente un défi technique relevé.
+            {t("projects.subtitle")}
           </p>
         </div>
 
         {loading ? (
           <div className="flex flex-col items-center justify-center py-24 gap-4">
             <Loader2 className="w-10 h-10 text-primary animate-spin" />
-            <p className="text-white/40 font-bold tracking-[0.2em] text-[10px] uppercase">Récupération des données GitHub...</p>
+            <p className="text-white/40 font-bold tracking-[0.2em] text-[10px] uppercase">{t("projects.loading")}</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -76,7 +78,7 @@ export default function Projects() {
                 </h3>
 
                 <p className="text-white/50 text-sm leading-relaxed mb-8 flex-grow font-sans">
-                  {project.description || "Pas de description disponible pour ce repository. Consultez le code pour plus de détails."}
+                  {project.description || t("projects.no_description")}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-8">
@@ -94,7 +96,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors group/link"
                   >
-                    Code Source <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                    {t("projects.source_code")} <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                   </a>
                   {project.homepage && (
                     <a
@@ -103,7 +105,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary-light transition-colors group/link"
                     >
-                      Démo Live <ExternalLink className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                      {t("projects.live_demo")} <ExternalLink className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                     </a>
                   )}
                 </div>
@@ -123,7 +125,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all font-bold text-sm text-white/60 hover:text-white font-sans"
           >
-            Voir plus sur GitHub <Github className="w-5 h-5" />
+            {t("projects.view_more")} <Github className="w-5 h-5" />
           </a>
         </motion.div>
       </div>
