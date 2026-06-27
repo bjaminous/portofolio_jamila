@@ -9,22 +9,22 @@ export default function TechStack() {
     {
       category: t("stack.categories.frontend"),
       icon: <Layout className="w-5 h-5 text-accent-pink" />,
-      items: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion"]
+      items: ["React", "Next.js", "Vue.js", "Angular", "Tailwind CSS", "TypeScript"]
     },
     {
       category: t("stack.categories.backend"),
       icon: <Code2 className="w-5 h-5 text-primary-light" />,
-      items: ["Node.js", "Laravel", "Express", "REST API", "PostgreSQL", "MySQL"]
+      items: ["PHP (Laravel)", "Symfony", "Node.js (Express)", "JWT / OAuth2", "RBAC", "PostgreSQL"]
     },
     {
       category: t("stack.categories.database"),
       icon: <Database className="w-5 h-5 text-accent-blue" />,
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"]
+      items: ["PostgreSQL", "MySQL", "REST API", "Swagger", "Postman", "Prisma ORM"]
     },
     {
       category: t("stack.categories.devops"),
       icon: <Settings className="w-5 h-5 text-white/40" />,
-      items: ["Git", "GitHub", "Vercel", "Docker", "Postman", "Figma"]
+      items: ["AI Integration (LLM)", "APIs AI", "Docker", "Git/GitHub", "Jira", "Figma"]
     }
   ];
 
@@ -33,7 +33,7 @@ export default function TechStack() {
       <div className="container px-6 mx-auto">
         <div className="max-w-3xl mb-12 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-display italic text-white">{t("stack.title")}</h2>
-          <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
+          <p className="text-[#CBD5E1] text-base md:text-lg leading-relaxed font-sans max-w-2xl">
             {t("stack.subtitle")}
           </p>
         </div>

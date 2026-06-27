@@ -9,19 +9,19 @@
         "contact_me": "Me contacter"
     },
     "hero": {
-        "status": "Disponible pour de nouvelles opportunités",
-        "title_part1": "Je conçois des expériences web",
-        "title_part2": "impactantes.",
-        "subtitle": "Développeuse Full-Stack | React | TypeScript | Node.js | API",
+        "status": "Recherche Alternance — Septembre 2026",
+        "title_part1": "Full-Stack Developer &",
+        "title_part2": "AI Integrator",
+        "subtitle": "React | Laravel | Symfony | Node.js | LLM | APIs",
         "view_projects": "Voir mes projets",
         "contact_me": "Me contacter"
     },
     "about": {
         "title_part1": "L'ingénierie au service du",
         "title_part2": "produit.",
-        "description1": "Développeuse Full-Stack en formation, je me distingue par ma capacité à traduire un besoin métier en solution technique robuste et élégante. Mon approche ne s'arrête pas au code : j'analyse l'impact utilisateur pour chaque ligne écrite.",
-        "description2": "Actuellement en Bachelor à l'@ECE Paris, j'ai forgé mon expertise à travers des projets à forte valeur ajoutée, notamment dans les domaines de l'EDTECH et de la gestion applicative métier.",
-        "description3": "Ma force réside dans mon autonomie, ma rigueur et ma vision transversale qui me permet de piloter des projets de bout en bout, de la conception logicielle à la mise en œuvre de solutions scalables.",
+        "description1": "Développeuse Full-Stack passionnée par l'innovation, je me spécialise dans la création de solutions web robustes et l'intégration intelligente de l'IA (LLM, APIs) pour automatiser et optimiser les processus métier.",
+        "description2": "Actuellement en Bachelor à l'ECE Paris, j'ai forgé mon expertise sur des architectures solides comme Laravel et Symfony, tout en exploitant la flexibilité de React et Node.js pour des expériences utilisateur modernes.",
+        "description3": "Ma force réside dans ma capacité à piloter des projets de bout en bout, en alliant rigueur technique et vision produit pour délivrer des applications scalables et centrées utilisateur.",
         "stats": {
             "value": "Orientée Valeur",
             "autonomy": "Stack Autonome"
@@ -47,12 +47,12 @@
     },
     "stack": {
         "title": "Mon Tech Stack.",
-        "subtitle": "Une sélection d'outils et de technologies modernes que j'utilise pour concevoir des produits digitaux performants et élégants.",
+        "subtitle": "Une expertise centrée sur Laravel, Symfony et l'écosystème React, complétée par une intégration native de l'IA.",
         "categories": {
             "frontend": "Frontend",
-            "backend": "Backend",
+            "backend": "Backend (PHP & Node)",
             "database": "Base de données",
-            "devops": "Outils & DevOps"
+            "devops": "IA & Outils"
         }
     },
     "projects": {

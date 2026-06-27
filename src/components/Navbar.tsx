@@ -37,10 +37,14 @@ export default function Navbar() {
       <div className="container px-6 mx-auto">
         <div className={`relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? "bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "bg-transparent border-transparent"
           }`}>
-          {/* Logo */}
+          {/* Logo with Avatar for Human Touch */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary transform group-hover:rotate-12 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-              <Terminal className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl border border-primary/20 overflow-hidden relative transform group-hover:rotate-6 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+              <img
+                src="/profile.jpg"
+                alt="Jamila"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold tracking-tighter text-white leading-none font-display uppercase">Jamila</span>
@@ -54,7 +58,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-5 py-2 text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors relative group font-sans"
+                className="px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#E2E8F0] hover:text-white transition-colors relative group font-sans"
               >
                 {link.name}
                 <span className="absolute bottom-1.5 left-5 right-5 h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />

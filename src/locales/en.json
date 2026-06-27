@@ -9,19 +9,19 @@
         "contact_me": "Contact Me"
     },
     "hero": {
-        "status": "Available for new opportunities",
-        "title_part1": "I design impactful ",
-        "title_part2": "web experiences.",
-        "subtitle": "Full-Stack Developer | React | TypeScript | Node.js | API",
+        "status": "Seeking Tech Internship & Alternance — September 2026",
+        "title_part1": "Full-Stack Developer &",
+        "title_part2": "AI Integrator",
+        "subtitle": "React | Laravel | Symfony | Node.js | LLM | APIs",
         "view_projects": "View my projects",
         "contact_me": "Contact Me"
     },
     "about": {
         "title_part1": "Engineering for the",
         "title_part2": "product.",
-        "description1": "Full-Stack Developer in training, I stand out for my ability to translate a business need into a robust and elegant technical solution. My approach doesn't stop at the code: I analyze the user impact for every line written.",
-        "description2": "Currently pursuing a Bachelor's at @ECE Paris, I have forged my expertise through high-value projects, notably in the EDTECH and business application management fields.",
-        "description3": "My strength lies in my autonomy, rigor and transversal vision that allows me to lead projects from end to end, from software design to the implementation of scalable solutions.",
+        "description1": "Full-Stack Developer passionate about innovation, specializing in robust web solutions and intelligent AI integration (LLM, APIs) to automate and optimize business processes.",
+        "description2": "Currently pursuing a Bachelor's at ECE Paris, I have built my expertise on solid architectures like Laravel and Symfony, while leveraging the flexibility of React and Node.js for modern user experiences.",
+        "description3": "My strength lies in my ability to lead projects end-to-end, combining technical rigor with product vision to deliver scalable and user-centric applications.",
         "stats": {
             "value": "Value Oriented",
             "autonomy": "Full Autonomy"
@@ -47,12 +47,12 @@
     },
     "stack": {
         "title": "My Tech Stack.",
-        "subtitle": "A selection of modern tools and technologies I use to design high-performance and elegant digital products.",
+        "subtitle": "An expertise focused on Laravel, Symfony and the React ecosystem, complemented by native AI integration.",
         "categories": {
             "frontend": "Frontend",
-            "backend": "Backend",
+            "backend": "Backend (PHP & Node)",
             "database": "Database",
-            "devops": "Tools & DevOps"
+            "devops": "AI & Tools"
         }
     },
     "projects": {

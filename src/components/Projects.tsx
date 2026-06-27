@@ -42,7 +42,7 @@ export default function Projects() {
             <span className="heading-gradient not-italic font-display">{t("projects.title_part1")} </span>
             <span className="text-primary italic font-display">{t("projects.title_part2")}</span>
           </h2>
-          <p className="text-white/50 text-base md:text-lg leading-relaxed font-sans max-w-2xl">
+          <p className="text-[#CBD5E1] text-base md:text-lg leading-relaxed font-sans max-w-2xl">
             {t("projects.subtitle")}
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function Projects() {
         {loading ? (
           <div className="flex flex-col items-center justify-center py-24 gap-4">
             <Loader2 className="w-10 h-10 text-primary animate-spin" />
-            <p className="text-white/40 font-bold tracking-[0.2em] text-[10px] uppercase">{t("projects.loading")}</p>
+            <p className="text-[#E2E8F0] font-bold tracking-[0.2em] text-[10px] uppercase">{t("projects.loading")}</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -65,9 +65,9 @@ export default function Projects() {
               >
                 <div className="flex justify-between items-start mb-8">
                   <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 group-hover:border-primary/30 transition-colors">
-                    <Github className="w-6 h-6 text-white/40 group-hover:text-primary transition-colors" />
+                    <Github className="w-6 h-6 text-[#E2E8F0] group-hover:text-primary transition-colors" />
                   </div>
-                  <div className="flex gap-4 text-white/30 text-[10px] font-bold">
+                  <div className="flex gap-4 text-[#E2E8F0] text-[10px] font-bold">
                     <span className="flex items-center gap-1.5"><Star className="w-3 h-3" /> {project.stargazers_count}</span>
                     <span className="flex items-center gap-1.5"><GitFork className="w-3 h-3" /> {project.forks_count}</span>
                   </div>
@@ -77,13 +77,13 @@ export default function Projects() {
                   {project.name.replace(/-/g, ' ')}
                 </h3>
 
-                <p className="text-white/50 text-sm leading-relaxed mb-8 flex-grow font-sans">
+                <p className="text-[#CBD5E1] text-sm leading-relaxed mb-8 flex-grow font-sans">
                   {project.description || t("projects.no_description")}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.topics && project.topics.slice(0, 3).map(topic => (
-                    <span key={topic} className="text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 bg-white/5 text-white/40 rounded-md border border-white/5">
+                    <span key={topic} className="text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 bg-white/5 text-[#E2E8F0] rounded-md border border-white/5">
                       {topic}
                     </span>
                   ))}

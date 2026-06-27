@@ -67,7 +67,7 @@ export default function About() {
               <span className="text-primary font-display italic">{t("about.title_part2")}</span>
             </h2>
 
-            <div className="space-y-6 md:space-y-8 text-white/60 text-base md:text-lg leading-relaxed font-sans">
+            <div className="space-y-6 md:space-y-8 text-[#CBD5E1] text-base md:text-lg leading-relaxed font-sans">
               <p>{t("about.description1")}</p>
               <p>{t("about.description2")}</p>
               <p>{t("about.description3")}</p>
@@ -100,7 +100,7 @@ export default function About() {
                 {item.icon}
               </div>
               <h3 className="text-xl font-bold mb-4 text-white font-display uppercase tracking-widest">{item.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed font-sans">{item.description}</p>
+              <p className="text-[#CBD5E1] text-sm leading-relaxed font-sans">{item.description}</p>
             </motion.div>
           ))}
         </div>

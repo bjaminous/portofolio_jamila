@@ -13,12 +13,30 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.05)_0%,transparent_70%)]" />
 
       <div className="container px-6 relative z-10 mx-auto">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+          {/* Professional Avatar / Human Touch */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, type: "spring", stiffness: 260, damping: 20 }}
+            className="relative mb-6"
+          >
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/30 p-1 bg-black/20 backdrop-blur-sm relative z-10 overflow-hidden group">
+              <img
+                src="/profile.jpg"
+                alt="Jamila Beulguibe"
+                className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            {/* Ambient glow behind avatar */}
+            <div className="absolute inset-0 bg-primary/40 rounded-full blur-2xl -z-10 animate-pulse" />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-primary-light mb-8 backdrop-blur-sm font-sans"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] md:text-xs font-bold text-primary-light mb-8 backdrop-blur-sm font-sans uppercase tracking-[0.15em]"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>{t("hero.status")}</span>
@@ -28,9 +46,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-8 leading-[1.1] md:leading-[0.9] font-display"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1] md:leading-[0.9] font-display"
           >
-            <span className="heading-gradient font-display">{t("hero.title_part1")} </span>
+            <span className="heading-gradient font-display italic">{t("hero.title_part1")} </span>
             <br className="hidden md:block" />
             <span className="text-gradient font-display">{t("hero.title_part2")}</span>
           </motion.h1>
@@ -41,7 +59,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col items-center gap-6"
           >
-            <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto font-medium tracking-wide font-sans">
+            <p className="text-base md:text-xl text-[#CBD5E1] max-w-2xl mx-auto font-medium tracking-wide font-sans leading-relaxed">
               {t("hero.subtitle")}
             </p>
 
@@ -58,17 +76,17 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="px-10 py-4 rounded-full bg-white/5 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 font-bold active:scale-95"
+                className="px-10 py-4 rounded-full bg-white/5 border border-white/10 hover:border-white/20 transition-all hover:bg-white/10 font-bold active:scale-95 text-[#E2E8F0]"
               >
                 {t("hero.contact_me")}
               </a>
             </div>
 
             <div className="flex items-center gap-5 mt-8">
-              <a href="https://github.com/bjaminous" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
+              <a href="https://github.com/bjaminous" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/jamila-beulguibe-inoussa-" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/jamila-beulguibe-inoussa-" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
             </div>
