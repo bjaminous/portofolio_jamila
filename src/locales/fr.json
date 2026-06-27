@@ -61,10 +61,52 @@
         "title_part2": "Sélectionnés.",
         "subtitle": "Exploration de mes réalisations techniques récentes, chargées dynamiquement depuis GitHub pour une transparence totale.",
         "loading": "Récupération des données GitHub...",
-        "no_description": "Pas de description disponible pour ce repository. Consultez le code pour plus de détails.",
+        "no_description": "Description en cours de rédaction.",
         "source_code": "Code Source",
         "live_demo": "Démo Live",
-        "view_more": "Voir plus sur GitHub"
+        "view_more": "Voir plus sur GitHub",
+        "items": {
+            "Alumni-IUC": {
+                "title": "Alumni Connect — IUC",
+                "description": "Plateforme complète de gestion pour les diplômés de l'IUC. Automatisation des annuaires et gestion des événements via une architecture Laravel/MySQL.",
+                "badge": "Expérience Pro",
+                "stack": [
+                    "Laravel",
+                    "MySQL",
+                    "PHP 8"
+                ]
+            },
+            "RealEstate-Dashboard": {
+                "title": "RealEstate Pro Dashboard",
+                "description": "Application Full-Stack de gestion immobilière permettant la visualisation analytique des biens et la gestion des transactions sécurisées.",
+                "badge": "Full-Stack",
+                "stack": [
+                    "Symfony",
+                    "PostgreSQL",
+                    "React"
+                ]
+            },
+            "GenAI-Optimizer": {
+                "title": "Prompt Architect & Optimizer",
+                "description": "Interface d'optimisation de prompts exploitant les APIs LLM pour maximiser la pertinence des réponses générées pour les entreprises.",
+                "badge": "Projet IA",
+                "stack": [
+                    "React",
+                    "OpenAI API",
+                    "Node.js"
+                ]
+            },
+            "portofolio_jamila": {
+                "title": "portofolio_jamila",
+                "description": "Mon portfolio actuel, conçu pour l'excellence en recrutement technique. Intégration dynamique de GitHub et multi-langues.",
+                "badge": "Frontend",
+                "stack": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind"
+                ]
+            }
+        }
     },
     "experience": {
         "title_part1": "Mon",

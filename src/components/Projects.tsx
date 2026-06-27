@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowUpRight, Loader2, Star, GitFork } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, Loader2, Star, GitFork, Sparkles, Terminal, Rocket } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,6 +19,8 @@ export default function Projects() {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const customProjects = t("projects.items", { returnObjects: true }) as Record<string, any>;
+
   useEffect(() => {
     fetch("https://api.github.com/users/bjaminous/repos?sort=updated&per_page=6")
       .then(res => res.json())
@@ -33,6 +35,17 @@ export default function Projects() {
         setLoading(false);
       });
   }, []);
+
+  const getBadgeStyles = (badge: string) => {
+    if (!badge) return "bg-white/5 text-white/40 border-white/10";
+    if (badge.toLowerCase().includes("ia") || badge.toLowerCase().includes("ai")) {
+      return "bg-primary/10 text-primary border-primary/20";
+    }
+    if (badge.toLowerCase().includes("exp") || badge.toLowerCase().includes("prof")) {
+      return "bg-accent-blue/10 text-accent-blue border-accent-blue/20";
+    }
+    return "bg-white/5 text-white/60 border-white/10";
+  };
 
   return (
     <section id="projects" className="py-24 relative">
@@ -54,63 +67,87 @@ export default function Projects() {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {repos.map((project, i) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-6 md:p-8 group flex flex-col h-full hover:bg-white/[0.03] transition-all"
-              >
-                <div className="flex justify-between items-start mb-8">
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 group-hover:border-primary/30 transition-colors">
-                    <Github className="w-6 h-6 text-[#E2E8F0] group-hover:text-primary transition-colors" />
+            {repos.map((project, i) => {
+              // Check if we have a custom override for this project name
+              const customData = customProjects ? customProjects[project.name] : null;
+              const title = customData?.title || project.name.replace(/-/g, ' ');
+              const description = customData?.description || project.description || t("projects.no_description");
+              const badge = customData?.badge;
+
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="glass-card p-6 md:p-8 group flex flex-col h-full hover:bg-white/[0.03] transition-all relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-primary transition-all duration-500" />
+
+                  <div className="flex justify-between items-start mb-8">
+                    {badge ? (
+                      <div className={`px-2.5 py-1 rounded-full border text-[8px] font-bold uppercase tracking-wider ${getBadgeStyles(badge)}`}>
+                        {badge}
+                      </div>
+                    ) : (
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/30 transition-colors">
+                        <Github className="w-5 h-5 text-[#E2E8F0] group-hover:text-primary transition-colors" />
+                      </div>
+                    )}
+                    <div className="flex gap-4 text-[#E2E8F0]/40 text-[10px] font-bold group-hover:text-primary-light transition-colors">
+                      <span className="flex items-center gap-1.5"><Star className="w-3 h-3" /> {project.stargazers_count}</span>
+                      <span className="flex items-center gap-1.5"><GitFork className="w-3 h-3" /> {project.forks_count}</span>
+                    </div>
                   </div>
-                  <div className="flex gap-4 text-[#E2E8F0] text-[10px] font-bold">
-                    <span className="flex items-center gap-1.5"><Star className="w-3 h-3" /> {project.stargazers_count}</span>
-                    <span className="flex items-center gap-1.5"><GitFork className="w-3 h-3" /> {project.forks_count}</span>
+
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-white font-display group-hover:text-primary-light transition-colors">
+                    {title}
+                  </h3>
+
+                  <p className="text-[#CBD5E1] text-sm leading-relaxed mb-8 flex-grow font-sans opacity-80">
+                    {description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {(project.topics && project.topics.length > 0) ? (
+                      project.topics.slice(0, 3).map(topic => (
+                        <span key={topic} className="text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 bg-white/5 text-[#E2E8F0] rounded border border-white/10">
+                          {topic}
+                        </span>
+                      ))
+                    ) : (
+                      customData?.stack && customData.stack.map((tech: string) => (
+                        <span key={tech} className="text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 bg-white/5 text-[#E2E8F0] rounded border border-white/10">
+                          {tech}
+                        </span>
+                      ))
+                    )}
                   </div>
-                </div>
 
-                <h3 className="text-2xl font-bold mb-3 text-white font-display group-hover:text-primary-light transition-colors">
-                  {project.name.replace(/-/g, ' ')}
-                </h3>
-
-                <p className="text-[#CBD5E1] text-sm leading-relaxed mb-8 flex-grow font-sans">
-                  {project.description || t("projects.no_description")}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.topics && project.topics.slice(0, 3).map(topic => (
-                    <span key={topic} className="text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 bg-white/5 text-[#E2E8F0] rounded-md border border-white/5">
-                      {topic}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between pt-6 border-t border-white/5">
-                  <a
-                    href={project.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors group/link"
-                  >
-                    {t("projects.source_code")} <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
-                  </a>
-                  {project.homepage && (
+                  <div className="flex items-center justify-between pt-6 border-t border-white/5">
                     <a
-                      href={project.homepage}
+                      href={project.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary-light transition-colors group/link"
+                      className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#E2E8F0] hover:text-white transition-colors group/link"
                     >
-                      {t("projects.live_demo")} <ExternalLink className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                      {t("projects.source_code")} <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                     </a>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+                    {project.homepage && (
+                      <a
+                        href={project.homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary-light transition-colors group/link"
+                      >
+                        {t("projects.live_demo")} <ExternalLink className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                      </a>
+                    )}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         )}
 
@@ -123,7 +160,7 @@ export default function Projects() {
             href="https://github.com/bjaminous"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all font-bold text-sm text-white/60 hover:text-white font-sans"
+            className="inline-flex items-center gap-3 px-10 py-4 rounded-full border border-white/10 hover:bg-white/5 hover:border-primary/30 transition-all font-bold text-sm text-[#E2E8F0] hover:text-white font-sans"
           >
             {t("projects.view_more")} <Github className="w-5 h-5" />
           </a>

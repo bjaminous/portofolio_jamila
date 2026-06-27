@@ -61,10 +61,52 @@
         "title_part2": "Projects.",
         "subtitle": "Exploration of my recent technical achievements, dynamically loaded from GitHub for total transparency.",
         "loading": "Fetching GitHub data...",
-        "no_description": "No description available for this repository. Check the code for more details.",
+        "no_description": "Description in progress.",
         "source_code": "Source Code",
         "live_demo": "Live Demo",
-        "view_more": "View more on GitHub"
+        "view_more": "View more on GitHub",
+        "items": {
+            "Alumni-IUC": {
+                "title": "Alumni Connect — IUC",
+                "description": "Comprehensive management platform for IUC graduates. Directory automation and event management via a Laravel/MySQL architecture.",
+                "badge": "Pro Experience",
+                "stack": [
+                    "Laravel",
+                    "MySQL",
+                    "PHP 8"
+                ]
+            },
+            "RealEstate-Dashboard": {
+                "title": "RealEstate Pro Dashboard",
+                "description": "Full-Stack real estate management application enabling analytical visualization of properties and secure transaction management.",
+                "badge": "Full-Stack",
+                "stack": [
+                    "Symfony",
+                    "PostgreSQL",
+                    "React"
+                ]
+            },
+            "GenAI-Optimizer": {
+                "title": "Prompt Architect & Optimizer",
+                "description": "Prompt optimization interface leveraging LLM APIs to maximize the relevance of generated responses for businesses.",
+                "badge": "AI Project",
+                "stack": [
+                    "React",
+                    "OpenAI API",
+                    "Node.js"
+                ]
+            },
+            "portofolio_jamila": {
+                "title": "Premium Portfolio v3",
+                "description": "My current portfolio, designed for technical recruitment excellence. Dynamic GitHub integration and multi-language support.",
+                "badge": "Frontend",
+                "stack": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind"
+                ]
+            }
+        }
     },
     "experience": {
         "title_part1": "My",
