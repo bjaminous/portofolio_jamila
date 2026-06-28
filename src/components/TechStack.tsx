@@ -9,17 +9,17 @@ export default function TechStack() {
     {
       category: t("stack.categories.frontend"),
       icon: <Layout className="w-5 h-5 text-accent-pink" />,
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand"]
+      items: ["React", "Next.js","Angular", "TypeScript", "Tailwind CSS", "Framer Motion"]
     },
     {
       category: t("stack.categories.backend"),
       icon: <Code2 className="w-5 h-5 text-primary-light" />,
-      items: ["PHP 8 (Laravel)", "Symfony", "Node.js (Express)", "REST API", "JWT / Auth", "Microservices"]
+      items: ["PHP 8 (Laravel)", "Symfony","Java","C", "Node.js (Express)", "REST API", "JWT / Auth", "Microservices"]
     },
     {
       category: t("stack.categories.database"),
       icon: <Database className="w-5 h-5 text-accent-blue" />,
-      items: ["PostgreSQL", "MySQL", "Prisma ORM", "Redis", "MongoDB", "Firebase"]
+      items: ["PostgreSQL", "MySQL","SQLite", "Prisma ORM", "Redis", "MongoDB", "Firebase"]
     },
     {
       category: t("stack.categories.devops"),

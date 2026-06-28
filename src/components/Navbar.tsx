@@ -76,6 +76,15 @@ export default function Navbar() {
               {i18n.language.split("-")[0].toUpperCase()}
             </button>
             <a
+              href="/CV_Jamila_BEULGUIBE.pdf"
+              download="CV_Jamila_BEULGUIBE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 bg-white/5 border border-white/20 text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all active:scale-95 font-sans"
+            >
+              CV
+            </a>
+            <a
               href="#contact"
               className="px-6 py-2.5 bg-white text-black rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all active:scale-95 font-sans"
             >
@@ -127,13 +136,24 @@ export default function Navbar() {
                   <a href="https://github.com/bjaminous" target="_blank" className="text-white/40"><Github /></a>
                   <a href="https://www.linkedin.com/in/jamila-beulguibe-inoussa-" target="_blank" className="text-white/40"><Linkedin /></a>
                 </div>
-                <a
-                  href="#contact"
-                  className="px-8 py-3 bg-primary text-white rounded-full font-bold font-sans text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t("nav.contact_me")}
-                </a>
+                <div className="flex gap-3">
+                  <a
+                    href="/CV_Jamila_BEULGUIBE.pdf"
+                    download="CV_Jamila_BEULGUIBE.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full font-bold font-sans text-sm hover:bg-white hover:text-black transition-all"
+                  >
+                    CV
+                  </a>
+                  <a
+                    href="#contact"
+                    className="px-8 py-3 bg-primary text-white rounded-full font-bold font-sans text-sm"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {t("nav.contact_me")}
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
