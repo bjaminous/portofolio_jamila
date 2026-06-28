@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ThreeBackground from "./components/ThreeBackground";
 import CustomCursor from "./components/CustomCursor";
+import JamiChat from "./components/JamiChat";
 import { Terminal } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -56,6 +57,7 @@ function App() {
           </div>
         </footer>
       </div>
+      <JamiChat />
     </main>
   );
 }
