@@ -38,7 +38,6 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] md:text-xs font-bold text-primary-light mb-8 backdrop-blur-sm font-sans uppercase tracking-[0.15em]"
           >
-            <Sparkles className="w-3.5 h-3.5" />
             <span>{t("hero.status")}</span>
           </motion.div>
 
