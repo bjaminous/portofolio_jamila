@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send, ArrowUpRight, Loader2 } from "lucide-react";
+import { Mail, Github, Linkedin, Send, ArrowUpRight, Loader2, Download } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -31,6 +31,13 @@ export default function Contact() {
       icon: <Mail className="w-5 h-5" />,
       href: "mailto:jamilabeulguibe@icloud.com",
       color: "hover:text-primary"
+    },
+    {
+      name: t("contact.social.cv"),
+      icon: <Download className="w-5 h-5" />,
+      href: "/CV_Jamila_BEULGUIBE.pdf",
+      color: "hover:text-white",
+      download: "CV_Jamila_BEULGUIBE.pdf"
     }
   ];
 
@@ -61,6 +68,7 @@ export default function Contact() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      download={link.download}
                       className={`flex items-center justify-between group py-2 border-b border-white/5 ${link.color} transition-colors`}
                     >
                       <div className="flex items-center gap-4">

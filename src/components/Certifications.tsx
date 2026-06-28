@@ -41,7 +41,7 @@ export default function Certifications() {
                                 className="glass-card p-6 md:p-8 group hover:border-primary/40 transition-all border-white/5 relative overflow-hidden h-full flex flex-col"
                             >
                                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
-                                    <Sparkles className="w-12 h-12 text-primary" />
+                                    
                                 </div>
 
                                 <div className="flex flex-col gap-6 relative z-10 h-full">

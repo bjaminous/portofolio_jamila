@@ -66,36 +66,6 @@
         "live_demo": "Démo Live",
         "view_more": "Voir plus sur GitHub",
         "items": {
-            "Alumni-IUC": {
-                "title": "Alumni Connect — IUC",
-                "description": "Plateforme complète de gestion pour les diplômés de l'IUC. Automatisation des annuaires et gestion des événements via une architecture Laravel/MySQL.",
-                "badge": "Expérience Pro",
-                "stack": [
-                    "Laravel",
-                    "MySQL",
-                    "PHP 8"
-                ]
-            },
-            "RealEstate-Dashboard": {
-                "title": "RealEstate Pro Dashboard",
-                "description": "Application Full-Stack de gestion immobilière permettant la visualisation analytique des biens et la gestion des transactions sécurisées.",
-                "badge": "Full-Stack",
-                "stack": [
-                    "Symfony",
-                    "PostgreSQL",
-                    "React"
-                ]
-            },
-            "GenAI-Optimizer": {
-                "title": "Prompt Architect & Optimizer",
-                "description": "Interface d'optimisation de prompts exploitant les APIs LLM pour maximiser la pertinence des réponses générées pour les entreprises.",
-                "badge": "Projet IA",
-                "stack": [
-                    "React",
-                    "OpenAI API",
-                    "Node.js"
-                ]
-            },
             "portofolio_jamila": {
                 "title": "portofolio_jamila",
                 "description": "Mon portfolio actuel, conçu pour l'excellence en recrutement technique. Intégration dynamique de GitHub et multi-langues.",
@@ -104,6 +74,39 @@
                     "React",
                     "TypeScript",
                     "Tailwind"
+                ]
+            },
+            "FastCare_project": {
+                "title": "FastCare Project",
+                "description": "Une application d’accompagnement au jeûne intermittent permettant aux utilisateurs de suivre leurs sessions de jeûne, définir des objectifs de santé, recevoir des rappels d’hydratation et accéder à des conseils personnalisés. ",
+                "badge": "Full-Stack",
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            "ChronicCare": {
+                "title": "ChronicCare (VitaCare)",
+                "description": "Une plateforme complète et professionnelle pour le suivi des patients chroniques et la gestion des constantes de santé.",
+                "badge": "Full-Stack",
+                "stack": [
+                    "TypeScript",
+                    "React"
+                ]
+            },
+            "curly_hair": {
+                "title": "curly hair",
+                "description": "une application full-stack conçue pour démontrer les principes de cybersécurité moderne via une authentification multi-étapes",
+                "badge": "Projet",
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            "humens-app": {
+                "title": "humens app",
+                "description": "Une application permettant aux utilisateurs d'exprimer leurs émotions et de recevoir du soutien de la part de la communauté tout autour d'un parfum.",
+                "badge": "Projet",
+                "stack": [
+                    "JavaScript"
                 ]
             }
         }
@@ -146,7 +149,7 @@
         }
     },
     "certs": {
-        "title": "Certifications & Credentials",
+        "title": "Certifications",
         "subtitle": "Toutes les certifications sont vérifiables — Cliquez pour voir les documents originaux.",
         "view_cert": "Voir le Certificat",
         "items": {
@@ -199,7 +202,8 @@
         "social": {
             "github": "GitHub",
             "linkedin": "LinkedIn",
-            "email": "Email"
+            "email": "Email",
+            "cv": "Télécharger CV"
         },
         "form_title": "Envoyer un message professionnel",
         "name": "Nom",

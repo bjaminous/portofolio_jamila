@@ -26,7 +26,8 @@ export default function Projects() {
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
-          setRepos(data);
+          const excluded = ["caf-app"];
+          setRepos(data.filter((r: Repo) => !excluded.includes(r.name)));
         }
         setLoading(false);
       })
@@ -73,6 +74,8 @@ export default function Projects() {
               const title = customData?.title || project.name.replace(/-/g, ' ');
               const description = customData?.description || project.description || t("projects.no_description");
               const badge = customData?.badge;
+              const sourceLink = customData?.source_link || project.html_url;
+              const demoLink = customData?.demo_link || project.homepage;
 
               return (
                 <motion.div
@@ -127,16 +130,16 @@ export default function Projects() {
 
                   <div className="flex items-center justify-between pt-6 border-t border-white/5">
                     <a
-                      href={project.html_url}
+                      href={sourceLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#E2E8F0] hover:text-white transition-colors group/link"
                     >
                       {t("projects.source_code")} <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                     </a>
-                    {project.homepage && (
+                    {demoLink && (
                       <a
-                        href={project.homepage}
+                        href={demoLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary-light transition-colors group/link"

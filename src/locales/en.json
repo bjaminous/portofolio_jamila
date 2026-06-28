@@ -105,6 +105,39 @@
                     "TypeScript",
                     "Tailwind"
                 ]
+            },
+            "FastCare_project": {
+                "title": "FastCare Project",
+                "description": "An intermittent fasting companion app that allows users to track their fasting sessions, set health goals, receive hydration reminders, and access personalized tips.",
+                "badge": "Full-Stack",
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            "ChronicCare": {
+                "title": "ChronicCare (VitaCare)",
+                "description": "A comprehensive and professional platform for monitoring chronic patients and managing their health vitals.",
+                "badge": "Full-Stack",
+                "stack": [
+                    "TypeScript",
+                    "React"
+                ]
+            },
+            "curly_hair": {
+                "title": "curly hair",
+                "description": "A full-stack application designed to demonstrate modern cybersecurity principles through multi-step authentication.",
+                "badge": "Project",
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            "humens-app": {
+                "title": "humens app",
+                "description": "An app that allows users to express their emotions and receive community support, all centered around a fragrance.",
+                "badge": "Project",
+                "stack": [
+                    "JavaScript"
+                ]
             }
         }
     },
@@ -146,7 +179,7 @@
         }
     },
     "certs": {
-        "title": "Certifications & Credentials",
+        "title": "Certifications",
         "subtitle": "All certifications are verifiable — Click to view original documents.",
         "view_cert": "View Certificate",
         "items": {
@@ -199,7 +232,8 @@
         "social": {
             "github": "GitHub",
             "linkedin": "LinkedIn",
-            "email": "Email"
+            "email": "Email",
+            "cv": "Download CV"
         },
         "form_title": "Send a professional message",
         "name": "Name",
